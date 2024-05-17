@@ -1,7 +1,8 @@
 import prisma from "../lib/prisma.js";
 
 export const registerParlante = async (req, res) => {
-    const {id, tipo, nombre, marca, ubicacion, potencia, cantidadAltavoces, bluetooth} = req.body;
+    const {id, tipo, nombre, marca, modelo, ubicacion, potencia, cantidadAltavoces, bluetooth} = req.body;
+    
     try {
         const newEquipo = await prisma.parlante.create({
             data: {
@@ -9,6 +10,7 @@ export const registerParlante = async (req, res) => {
                 tipo,
                 nombre,
                 marca,
+                modelo,
                 ubicacion,
                 potencia,
                 cantidadAltavoces,

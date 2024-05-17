@@ -17,6 +17,7 @@ model parlante {
   id                String   @id @default(auto()) @map("_id") @db.ObjectId
   tipo              String
   marca             String
+  modelo            String
   ubicacion         String
   potencia          String?
   cantidadAltavoces Int?
@@ -24,7 +25,7 @@ model parlante {
 }
 
 model proyector {
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
   tipo       String
   marca      String
   ubicacion  String
